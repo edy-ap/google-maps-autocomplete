@@ -38,8 +38,8 @@
     "@angular/cdk": ">=16.x",
     "@angular/material": ">=16.x",
     "@types/google.maps": ">=3.43.3",
-    "rxjs": "^7.x",
-    "zone.js": "~0.13.x"
+    "rxjs": ">=7.x",
+    "zone.js": ">=0.13.x"
   },
   "engines": {
     "node": ">=16.0.0"
