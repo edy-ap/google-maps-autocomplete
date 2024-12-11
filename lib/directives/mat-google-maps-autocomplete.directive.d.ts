@@ -1,0 +1,51 @@
+/// <reference types="googlemaps" />
+/// <reference types="googlemaps" />
+import { AfterViewInit, ChangeDetectorRef, ElementRef, EventEmitter, NgZone, OnDestroy, OnInit } from '@angular/core';
+import { ControlValueAccessor, FormControl } from '@angular/forms';
+import { GermanAddress, Location } from '../interfaces';
+import { ScriptLoaderService } from "../services/script-loader.service";
+import PlaceResult = google.maps.places.PlaceResult;
+import AutocompleteOptions = google.maps.places.AutocompleteOptions;
+import * as i0 from "@angular/core";
+export declare class MatGoogleMapsAutocompleteDirective implements OnInit, AfterViewInit, OnDestroy, ControlValueAccessor {
+    platformId: string;
+    apiKey: string;
+    elemRef: ElementRef;
+    private cf;
+    private loaderService;
+    private ngZone;
+    inputField: ElementRef;
+    autocomplete: google.maps.places.Autocomplete | undefined;
+    address: PlaceResult | string;
+    country: string | string[];
+    placeIdOnly?: boolean;
+    strictBounds?: boolean;
+    types?: string[];
+    type?: string;
+    autoCompleteOptions: AutocompleteOptions;
+    onChange: EventEmitter<PlaceResult | string | null>;
+    onAutocompleteSelected: EventEmitter<PlaceResult>;
+    onGermanAddressMapped: EventEmitter<GermanAddress>;
+    onLocationSelected: EventEmitter<Location>;
+    disabled: boolean;
+    _value: string;
+    get value(): string;
+    set value(value: string);
+    private onNewPlaceResult;
+    propagateChange: (_: any) => void;
+    constructor(platformId: string, apiKey: string, elemRef: ElementRef, cf: ChangeDetectorRef, loaderService: ScriptLoaderService, ngZone: NgZone);
+    ngOnDestroy(): void;
+    ngAfterViewInit(): void;
+    ngOnInit(): void;
+    validate(fc: FormControl): boolean;
+    onChangeInputValue(): void;
+    initGoogleMapsAutocomplete(): void;
+    registerOnChange(fn: any): void;
+    registerOnTouched(fn: any): void;
+    setDisabledState(isDisabled: boolean): void;
+    writeValue(obj: any): void;
+    loadMap(): void;
+    initMap(): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<MatGoogleMapsAutocompleteDirective, never>;
+    static ɵdir: i0.ɵɵDirectiveDeclaration<MatGoogleMapsAutocompleteDirective, "[matGoogleMapsAutocomplete]", ["matGoogleMapsAutocomplete"], { "address": { "alias": "address"; "required": false; }; "country": { "alias": "country"; "required": false; }; "placeIdOnly": { "alias": "placeIdOnly"; "required": false; }; "strictBounds": { "alias": "strictBounds"; "required": false; }; "types": { "alias": "types"; "required": false; }; "type": { "alias": "type"; "required": false; }; "autoCompleteOptions": { "alias": "autoCompleteOptions"; "required": false; }; "value": { "alias": "value"; "required": false; }; }, { "onChange": "onChange"; "onAutocompleteSelected": "onAutocompleteSelected"; "onGermanAddressMapped": "onGermanAddressMapped"; "onLocationSelected": "onLocationSelected"; }, never, never, false, never>;
+}
