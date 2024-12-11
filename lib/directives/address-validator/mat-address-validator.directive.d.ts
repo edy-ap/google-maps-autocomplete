@@ -1,4 +1,4 @@
-/// <reference types="googlemaps" />
+/// <reference types="google.maps" />
 import { EventEmitter } from '@angular/core';
 import { Validator, ValidatorFn } from '@angular/forms';
 import PlaceResult = google.maps.places.PlaceResult;

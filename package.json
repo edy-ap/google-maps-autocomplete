@@ -30,14 +30,14 @@
     "url": "https://github.com/angular-material-extensions/google-maps-autocomplete/issues"
   },
   "peerDependencies": {
-    "@angular/common": "^16.x",
-    "@angular/core": "^16.x",
-    "@angular/platform-browser": "^16.x",
-    "@angular/flex-layout": "^15.0.0-beta.42",
-    "@angular/forms": "^16.x",
-    "@angular/cdk": "^16.x",
-    "@angular/material": "^16.x",
-    "@types/googlemaps": "~3.43.3",
+    "@angular/common": ">=16.x",
+    "@angular/core": ">=16.x",
+    "@angular/platform-browser": ">=16.x",
+    "@angular/flex-layout": ">=15.0.0-beta.42",
+    "@angular/forms": ">=16.x",
+    "@angular/cdk": ">=16.x",
+    "@angular/material": ">=16.x",
+    "@types/google.maps": ">=3.43.3",
     "rxjs": "^7.x",
     "zone.js": "~0.13.x"
   },

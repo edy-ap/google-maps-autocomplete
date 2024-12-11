@@ -1,5 +1,5 @@
-/// <reference types="googlemaps" />
-/// <reference types="googlemaps" />
+/// <reference types="google.maps" />
+/// <reference types="google.maps" />
 import { ElementRef, EventEmitter, NgZone, OnDestroy, OnInit } from '@angular/core';
 import { ControlValueAccessor, UntypedFormControl } from '@angular/forms';
 import { Location } from '../interfaces/location.interface';

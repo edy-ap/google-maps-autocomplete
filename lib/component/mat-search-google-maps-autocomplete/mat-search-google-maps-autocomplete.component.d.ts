@@ -1,4 +1,4 @@
-/// <reference types="googlemaps" />
+/// <reference types="google.maps" />
 import { EventEmitter, OnInit } from '@angular/core';
 import { ControlValueAccessor, UntypedFormBuilder, UntypedFormGroup } from '@angular/forms';
 import { GermanAddress } from '../../interfaces';
